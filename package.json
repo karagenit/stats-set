@@ -1,0 +1,14 @@
+{
+  "name": "stats-set",
+  "version": "0.0.0",
+  "description": "Online version of the Set Card Game, themed after AP Statistics",
+  "main": "index.js",
+  "repository": "https://github.com/karagenit/stats-set",
+  "author": "Caleb Smith <karagenit@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
