@@ -1,3 +1,9 @@
+<?php
+    $score = $_GET['score'];
+    $ip = $_SERVER['REMOTE_ADDR'];
+    file_put_contents('data.csv', "$ip, $score\n", FILE_APPEND | LOCK_EX);
+?>
+
 <!DOCTYPE html>
 <html>
 <body>
