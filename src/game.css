@@ -1,0 +1,19 @@
+body {
+    margin: auto;
+    text-align:center;
+}
+
+img {
+    width: 175px;
+}
+
+.btn {
+    margin: 5px;
+    border-width: 3px;
+}
+
+.card {
+}
+
+.card-selected {
+}

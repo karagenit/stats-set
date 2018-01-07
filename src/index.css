@@ -1,19 +1,8 @@
 body {
+    max-width: 700px;
     margin: auto;
-    text-align:center;
 }
 
-img {
-    width: 175px;
-}
-
-.btn {
-    margin: 5px;
-    border-width: 3px;
-}
-
-.card {
-}
-
-.card-selected {
+.center {
+    text-align: center;
 }
