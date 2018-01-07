@@ -2,8 +2,8 @@
  * GAME STATES
  *
  * Each button will have a value, 3 characters long
- * Char 1: 1: Histogram, 2: Bar Chart, 3: Dot Plot
- * Char 2: 1: Red, 2: Green, 3: Blue
+ * Char 1: 1: Box Plot, 2: Histogram, 3: Dot Plot
+ * Char 2: 1: Orange, 2: Purple, 3: Blue
  * Char 3: 1, 2, 3
  */
 
@@ -47,8 +47,9 @@ function randInt() {
 
 // Assigns randonm value to one card
 function randomizeCard(card) {
-    $(card).text("" + randInt() + randInt() + randInt());
-    // TODO: instead, set value to numbers & assign image
+    var code = "" + randInt() + randInt() + randInt();
+    $(card).val(code);
+    $(card).html('<img src="./img/' + code + '.png">');
     // TODO: assure no repeats on the board
 }
 
@@ -67,9 +68,9 @@ function matchOrDiff(one, two, three) {
 
 // Determines if the three 'state' strings constitute a set
 function isSet(selected) {
-    var one = $(selected[0]).text();
-    var two = $(selected[1]).text();
-    var three = $(selected[2]).text();
+    var one = $(selected[0]).val();
+    var two = $(selected[1]).val();
+    var three = $(selected[2]).val();
 
     return matchOrDiff(one.charAt(0), two.charAt(0), three.charAt(0)) &&
            matchOrDiff(one.charAt(1), two.charAt(1), three.charAt(1)) &&
