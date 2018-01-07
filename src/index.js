@@ -12,11 +12,13 @@ function highlightCard(card) {
 }
 
 function clearCard(card) {
-    $(card).removeClass("btn-primary").addClass("btn-primary");
+    $(card).removeClass("btn-primary").addClass("btn-secondary");
 }
 
 function clearAllCards() {
-
+    $(".btn").each(function(i, card) {
+        clearCard(this);
+    });
 }
 
 function randomizeCard(card) {
@@ -43,7 +45,7 @@ function isSet(one, two, three) {
 // Checks if there is a set on the board
 function checkSet() {
     //grab three selected cards
-    selected = []
+    selected = [1, 2, 3]
     //check if 3 are actually selected
     if(selected.length === 3) {
         if(isSet("test", "test", "test")) {
@@ -64,3 +66,5 @@ $("#btn1").click(function() {
     highlightCard(this);
     checkSet();
 });
+
+// TODO: add timer to redirect (with score as post parameter) to score page
