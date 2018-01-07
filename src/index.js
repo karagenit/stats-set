@@ -8,7 +8,7 @@
  */
 
 var score = 0;
-var time = 9001;
+var time = 60;
 
 function incrementScore() {
     score += 1;
@@ -19,7 +19,7 @@ function updateTime() {
     time -= 1;
     $("#time").text(time);
     if(time <= 0) {
-        window.location = "score.html";
+        window.location = "score.php?score=" + score;
     }
 }
 
