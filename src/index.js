@@ -21,12 +21,19 @@ function clearAllCards() {
     });
 }
 
-function randomizeCard(card) {
+function randInt() {
+    return Math.floor(Math.random() * 3) + 1;
+}
 
+function randomizeCard(card) {
+    $(card).text("" + randInt() + randInt() + randInt());
+    // TODO: instead, set value to numbers & assign image
 }
 
 function randomizeAllCards() {
-
+    $(".btn-primary").each(function(i, card) {
+        randomizeCard(this);
+    });
 }
 
 // Returns true if either all three are the same or different
