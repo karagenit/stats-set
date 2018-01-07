@@ -25,17 +25,17 @@ function updateTime() {
 
 // Adds the "active" state to a card
 function highlightCard(card) {
-    $(card).addClass("active");
+    $(card).removeClass("btn-outline-primary").addClass("btn-outline-success");
 }
 
 // Clears the "active" state on a card
 function clearCard(card) {
-    $(card).removeClass("active");
+    $(card).removeClass("btn-outline-success").addClass("btn-outline-primary");
 }
 
 // Clears the "active" state on all cards
 function clearAllCards() {
-    $(".btn-primary").each(function(i, card) {
+    $(".btn").each(function(i, card) {
         clearCard(this);
     });
 }
@@ -55,7 +55,7 @@ function randomizeCard(card) {
 
 // Assigns random values to all cards on the board
 function randomizeAllCards() {
-    $(".btn-primary").each(function(i, card) {
+    $(".btn").each(function(i, card) {
         randomizeCard(this);
     });
 }
@@ -82,7 +82,7 @@ function checkSet() {
 
     //grab all the currently selected cards
     selected = []
-    $(".active").each(function(i, card) {
+    $(".btn-outline-success").each(function(i, card) {
         selected.push(this);
     });
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
 });
 
 // Handles clicks on buttons
-$(".btn-primary").click(function() {
+$(".btn").click(function() {
     highlightCard(this);
     checkSet();
 });
