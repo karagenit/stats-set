@@ -43,7 +43,11 @@ function matchOrDiff(one, two, three) {
 }
 
 // Determines if the three 'state' strings constitute a set
-function isSet(one, two, three) {
+function isSet(selected) {
+    var one = $(selected[0]).text();
+    var two = $(selected[1]).text();
+    var three = $(selected[2]).text();
+
     return matchOrDiff(one.charAt(0), two.charAt(0), three.charAt(0)) &&
            matchOrDiff(one.charAt(1), two.charAt(1), three.charAt(1)) &&
            matchOrDiff(one.charAt(2), two.charAt(2), three.charAt(2));
@@ -58,7 +62,8 @@ function checkSet() {
 
     //check if 3 are actually selected
     if(selected.length === 3) {
-        if(isSet("test", "test", "test")) {
+        if(isSet(selected)) {
+            alert('set');
             //add score
             //re-randomize those three cards
         }
