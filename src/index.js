@@ -14,29 +14,36 @@ function incrementScore() {
     $("#score").text(score);
 }
 
+// Adds the "active" state to a card
 function highlightCard(card) {
     $(card).addClass("active");
 }
 
+// Clears the "active" state on a card
 function clearCard(card) {
     $(card).removeClass("active");
 }
 
+// Clears the "active" state on all cards
 function clearAllCards() {
     $(".btn-primary").each(function(i, card) {
         clearCard(this);
     });
 }
 
+// Generates a random number 1 ... 3
 function randInt() {
     return Math.floor(Math.random() * 3) + 1;
 }
 
+// Assigns randonm value to one card
 function randomizeCard(card) {
     $(card).text("" + randInt() + randInt() + randInt());
     // TODO: instead, set value to numbers & assign image
+    // TODO: assure no repeats on the board
 }
 
+// Assigns random values to all cards on the board
 function randomizeAllCards() {
     $(".btn-primary").each(function(i, card) {
         randomizeCard(this);
@@ -62,6 +69,8 @@ function isSet(selected) {
 
 // Checks if there is a set on the board
 function checkSet() {
+
+    //grab all the currently selected cards
     selected = []
     $(".active").each(function(i, card) {
         selected.push(this);
@@ -69,9 +78,12 @@ function checkSet() {
 
     //check if 3 are actually selected
     if(selected.length === 3) {
+        //if its a set, add score & add new cards
         if(isSet(selected)) {
             incrementScore();
-            //re-randomize those three cards
+            randomizeCard(selected[0]);
+            randomizeCard(selected[1]);
+            randomizeCard(selected[2]);
         }
         clearAllCards();
     }
