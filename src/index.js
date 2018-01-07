@@ -2,17 +2,17 @@
  * GAME STATES
  *
  * Each button will have a value, 3 characters long
- * Char 1: (H)istogram, (B)ar Chart, (D)ot Plot
- * Char 2: (R)ed, (G)reen, (B)lue
+ * Char 1: 1: Histogram, 2: Bar Chart, 3: Dot Plot
+ * Char 2: 1: Red, 2: Green, 3: Blue
  * Char 3: 1, 2, 3
  */
 
 function highlightCard(card) {
-    $(card).removeClass("btn-secondary").addClass("btn-primary");
+    $(card).addClass("card-selected");
 }
 
 function clearCard(card) {
-    $(card).removeClass("btn-primary").addClass("btn-secondary");
+    $(card).removeClass("card-selected");
 }
 
 function clearAllCards() {
@@ -44,8 +44,11 @@ function isSet(one, two, three) {
 
 // Checks if there is a set on the board
 function checkSet() {
-    //grab three selected cards
-    selected = [1, 2, 3]
+    selected = []
+    $(".card-selected").each(function(i, card) {
+        selected.push(this);
+    });
+
     //check if 3 are actually selected
     if(selected.length === 3) {
         if(isSet("test", "test", "test")) {
@@ -62,7 +65,7 @@ $(document).ready(function() {
 });
 
 // Handles clicks on buttons
-$("#btn1").click(function() {
+$(".card").click(function() {
     highlightCard(this);
     checkSet();
 });
