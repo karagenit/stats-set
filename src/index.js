@@ -8,10 +8,19 @@
  */
 
 var score = 0;
+var time = 9001;
 
 function incrementScore() {
     score += 1;
     $("#score").text(score);
+}
+
+function updateTime() {
+    time -= 1;
+    $("#time").text(time);
+    if(time <= 0) {
+        window.location = "score.html";
+    }
 }
 
 // Adds the "active" state to a card
@@ -100,4 +109,7 @@ $(".btn-primary").click(function() {
     checkSet();
 });
 
-// TODO: add timer to redirect (with score as post parameter) to score page
+// Updates the clock every 1000 ms
+setInterval(function(){
+    updateTime();
+}, 1000);
