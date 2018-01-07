@@ -8,15 +8,15 @@
  */
 
 function highlightCard(card) {
-    $(card).addClass("card-selected");
+    $(card).addClass("active");
 }
 
 function clearCard(card) {
-    $(card).removeClass("card-selected");
+    $(card).removeClass("active");
 }
 
 function clearAllCards() {
-    $(".btn").each(function(i, card) {
+    $(".btn-primary").each(function(i, card) {
         clearCard(this);
     });
 }
@@ -45,7 +45,7 @@ function isSet(one, two, three) {
 // Checks if there is a set on the board
 function checkSet() {
     selected = []
-    $(".card-selected").each(function(i, card) {
+    $(".active").each(function(i, card) {
         selected.push(this);
     });
 
@@ -65,7 +65,7 @@ $(document).ready(function() {
 });
 
 // Handles clicks on buttons
-$(".card").click(function() {
+$(".btn-primary").click(function() {
     highlightCard(this);
     checkSet();
 });
