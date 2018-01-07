@@ -7,6 +7,13 @@
  * Char 3: 1, 2, 3
  */
 
+var score = 0;
+
+function incrementScore() {
+    score += 1;
+    $("#score").text(score);
+}
+
 function highlightCard(card) {
     $(card).addClass("active");
 }
@@ -63,8 +70,7 @@ function checkSet() {
     //check if 3 are actually selected
     if(selected.length === 3) {
         if(isSet(selected)) {
-            alert('set');
-            //add score
+            incrementScore();
             //re-randomize those three cards
         }
         clearAllCards();
