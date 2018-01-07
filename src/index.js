@@ -3,5 +3,5 @@ $(document).ready(function() {
 });
 
 $("#btn1").click(function() {
-    $(this).addClass("btn btn-primary");
+    $(this).removeClass("btn-secondary").addClass("btn-primary");
 });
