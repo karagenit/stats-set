@@ -40,20 +40,23 @@ function isSet(one, two, three) {
            matchOrDiff(one.charAt(2), two.charAt(2), three.charAt(2));
 }
 
+// Checks if there is a set on the board
 function checkSet() {
     //grab three selected cards
-    if(isSet("test", "test", "test")) {
-        //add score
-        //clear all selected
-        //re-randomize those three cards
-    } else {
-        //clear all selected
+    selected = []
+    //check if 3 are actually selected
+    if(selected.length === 3) {
+        if(isSet("test", "test", "test")) {
+            //add score
+            //re-randomize those three cards
+        }
+        clearAllCards();
     }
 }
 
 // Sets up the board, generates each card's state
 $(document).ready(function() {
-    //init cards
+    randomizeAllCards();
 });
 
 // Handles clicks on buttons
