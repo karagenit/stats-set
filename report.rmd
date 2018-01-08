@@ -1,6 +1,6 @@
 ---
 title: "Stats Set Report"
-author: "Caleb Smith"
+author: "Caleb Smith, Laura Dobie, Agrayan Gupta, & John Alexis"
 date: "January 7, 2018"
 output: 
   pdf_document:
@@ -28,6 +28,8 @@ scores = scores[!is.na(scores)]
 print(scores, row.names=FALSE)
 ```
 
+**Frequencies of Scores\:**
+
 ```{r, echo=FALSE}
 freq = table(scores)
 
@@ -35,8 +37,6 @@ barplot(freq,
         main="Frequencies of Scores",
         ylab="Frequency (#)",
         xlab="Score")
-
-kable(t(as.matrix(freq)))
 ```
 
 ```{r, echo=FALSE}
@@ -47,7 +47,11 @@ barplot(relfreq,
         ylab="Relative Frequency (%)",
         xlab="Score",
         ylim=c(0,30))
+```
 
+**Exact relative frequencies\:**
+
+```{r, echo=FALSE}
 kable(t(as.matrix(round(relfreq,2))))
 ```
 
