@@ -1,5 +1,3 @@
 # Stats Set
 
-## Setup
-
-Requires Bootstrap (4.0.0-beta.3) extracted in the `src/bootstrap/` directory.
+Statistics-themed Set game for the AP Stats carnival.
