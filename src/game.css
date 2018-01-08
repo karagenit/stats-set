@@ -12,8 +12,19 @@ img {
     border-width: 3px;
 }
 
-.card {
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.card-selected {
+button,
+button:active,
+button:focus,
+button:hover,
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover {
+    outline: none !important;
+    box-shadow: none !important;
 }
