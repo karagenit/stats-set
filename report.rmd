@@ -30,11 +30,11 @@ print(scores, row.names=FALSE)
 
 <!-- bar graph of relative frequencies (%) -->
 
-<!-- TODO actually calculate these from data -->
+## Data Analysis
 
-Expected sets: $$ E(S) = 4.9 $$
+Expected sets: $$ E(S) = `r round(mean(scores),2)` $$
 
-SD of sets: $$ SD(S) = 3.1 $$
+SD of sets: $$ SD(S) = `r round(sd(scores),2)` $$
 
 # Payout
 
