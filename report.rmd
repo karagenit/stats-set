@@ -1,0 +1,10 @@
+---
+title: "Stats Set Report"
+author: "Caleb Smith"
+date: "January 7, 2018"
+output: 
+  pdf_document:
+    number_sections: yes
+---
+
+# Intro
