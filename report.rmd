@@ -17,6 +17,15 @@ http://caleb.techhounds.com/carnival
 
 Because our game relies upon player skill to determine payout (and not just chance), our probability model is **empirical**. Video of us collecting data to create this model can be found on Google Drive, [here](). <!-- TODO add drive link -->
 
+## Collected Data
+
+```{r, echo=FALSE}
+raw <- read.csv("./src/data.csv", header=TRUE)
+scores = raw$Score
+scores = scores[!is.na(scores)]
+print(scores, row.names=FALSE)
+```
+
 <!-- dot plot of data -->
 
 <!-- bar graph of relative frequencies (%) -->
