@@ -17,7 +17,7 @@ http://caleb.techhounds.com/carnival
 
 Because our game relies upon player skill to determine payout (and not just chance), our probability model is **empirical**. Video of us collecting data to create this model can be found on Google Drive, [here](). <!-- TODO add drive link -->
 
-## Collected Data
+**Collected Data\:**
 
 ```{r, echo=FALSE}
 raw <- read.csv("./src/data.csv", header=TRUE)
@@ -26,23 +26,22 @@ scores = scores[!is.na(scores)]
 print(scores, row.names=FALSE)
 ```
 
-<!-- dot plot of data -->
-
-## Data Frequency
-
 ```{r, echo=FALSE}
-hist(scores, 
-     breaks=13,
-     main="Frequency of Scores",
-     ylab="Frequency",
-     xlab="Score")
+freq = table(scores)
+barplot(freq,
+        main="Frequencies of Scores",
+        ylab="Frequency (#)",
+        xlab="Score")
 ```
 
-## Relative Frequencies of Scores
-
-<!-- bar graph of relative frequencies (%) -->
-
-## Data Analysis
+```{r, echo=FALSE}
+relfreq = freq / sum(as.vector(freq)) * 100
+barplot(relfreq,
+        main="Relative Frequencies of Scores",
+        ylab="Relative Frequency (%)",
+        xlab="Score",
+        ylim=c(0,30))
+```
 
 Expected sets: $$ E(S) = `r round(mean(scores),2)` $$
 
