@@ -28,6 +28,18 @@ print(scores, row.names=FALSE)
 
 <!-- dot plot of data -->
 
+## Data Frequency
+
+```{r, echo=FALSE}
+hist(scores, 
+     breaks=13,
+     main="Frequency of Scores",
+     ylab="Frequency",
+     xlab="Score")
+```
+
+## Relative Frequencies of Scores
+
 <!-- bar graph of relative frequencies (%) -->
 
 ## Data Analysis
