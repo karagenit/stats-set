@@ -52,8 +52,8 @@ SD of sets: $$ SD(S) = `r round(sd(scores),2)` $$
 
 Payout formula: $$ P(S) = 2 * S $$
 
-Expected payout: $$ E(P) = 9.8 $$
+Expected payout: $$ E(P) = `r round(2 * mean(scores),2)` $$
 
-SD of payout: $$ SD(P) = 6.2 $$
+SD of payout: $$ SD(P) = `r round(2 * sd(scores),2)` $$
 
 Cost to play: $10
