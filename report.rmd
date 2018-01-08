@@ -7,4 +7,32 @@ output:
     number_sections: yes
 ---
 
-# Intro
+# The Game
+
+Our game is a reinterpretation of a card game titled "Set". Essentially, you attempt to match together *sets* of three cards to score points. Further instructions (and the game itself!) can be found online:
+
+http://caleb.techhounds.com/carnival
+
+# Probability Model
+
+Because our game relies upon player skill to determine payout (and not just chance), our probability model is **empirical**. Video of us collecting data to create this model can be found on Google Drive, [here](). <!-- TODO add drive link -->
+
+<!-- dot plot of data -->
+
+<!-- bar graph of relative frequencies (%) -->
+
+<!-- TODO actually calculate these from data -->
+
+Expected sets: $$ E(S) = 4.9 $$
+
+SD of sets: $$ SD(S) = 3.1 $$
+
+# Payout
+
+Payout formula: $$ P(S) = 2 * S $$
+
+Expected payout: $$ E(P) = 9.8 $$
+
+SD of payout: $$ SD(P) = 6.2 $$
+
+Cost to play: $10
