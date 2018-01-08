@@ -19,27 +19,36 @@ Because our game relies upon player skill to determine payout (and not just chan
 **Collected Data\:**
 
 ```{r, echo=FALSE}
+library(knitr)
+
 raw <- read.csv("./src/data.csv", header=TRUE)
 scores = raw$Score
 scores = scores[!is.na(scores)]
+
 print(scores, row.names=FALSE)
 ```
 
 ```{r, echo=FALSE}
 freq = table(scores)
+
 barplot(freq,
         main="Frequencies of Scores",
         ylab="Frequency (#)",
         xlab="Score")
+
+kable(t(as.matrix(freq)))
 ```
 
 ```{r, echo=FALSE}
 relfreq = freq / sum(as.vector(freq)) * 100
+
 barplot(relfreq,
         main="Relative Frequencies of Scores",
         ylab="Relative Frequency (%)",
         xlab="Score",
         ylim=c(0,30))
+
+kable(t(as.matrix(round(relfreq,2))))
 ```
 
 Expected sets: $$ E(S) = `r round(mean(scores),2)` $$
