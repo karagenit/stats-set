@@ -5,6 +5,7 @@ date: "January 7, 2018"
 output: 
   pdf_document:
     number_sections: yes
+urlcolor: blue
 ---
 
 # The Game
