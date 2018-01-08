@@ -10,13 +10,11 @@ urlcolor: blue
 
 # The Game
 
-Our game is a reinterpretation of a card game titled "Set". Essentially, you attempt to match together *sets* of three cards to score points. Further instructions (and the game itself!) can be found online:
-
-http://caleb.techhounds.com/carnival
+Our game is a reinterpretation of a card game titled "Set". Essentially, you attempt to match together *sets* of three cards to score points. Further instructions (and the game itself) can be found online [here](http://caleb.techhounds.com/carnival).
 
 # Probability Model
 
-Because our game relies upon player skill to determine payout (and not just chance), our probability model is **empirical**. Video of us collecting data to create this model can be found on Google Drive, [here](). <!-- TODO add drive link -->
+Because our game relies upon player skill to determine payout (and not just chance), our probability model is **empirical**. Video of us collecting data to create this model can be found on Google Drive, [here](https://drive.google.com/file/d/1EglbOLWs2Gl6OoyVSNL-hiKfIyiXM3ak/view?usp=sharing) and [here](https://drive.google.com/file/d/1KAvRjhuaiVsT4ot49bwMJM9ZKrL3jXgZ/view?usp=sharing).
 
 **Collected Data\:**
 
